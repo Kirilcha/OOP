@@ -10,9 +10,13 @@ void List::Free()
 	List *p = this;
 	List *t;
 
-	p->next = NULL;
-	p->a = NULL;
-	p = NULL;
+	while (p)
+	{
+		t = p;
+		p = p->next;
+		delete t;         
+	}	
+
 }
 
 void List::In(ifstream &ifst)       

@@ -32,9 +32,6 @@ int main()
 	begin->In(in);
 	begin->Out(out);
 
-	//begin->Free();
-	//begin->Out(out);
-
 	cout << "Stop" << endl;
 
 	in.close();

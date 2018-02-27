@@ -12,3 +12,4 @@ void Posl_Pog:: Out(ofstream &ofst)
 {
 	ofst << " Страна данной пословицы/поговорки: " << strana << endl;
 }
+

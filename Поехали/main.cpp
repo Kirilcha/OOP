@@ -30,12 +30,13 @@ int main()
 
 	List* begin = new List;
 	begin->In(in);
+	begin->Sort();
+	begin->Out(out);
+	begin->Free();
+	begin = NULL;
 	begin->Out(out);
 
-	//begin->Free();
-	//begin->Out(out);
-
-	cout << "Stop" << endl;
+	cout << endl << "Stop" << endl;
 
 	in.close();
 	out.close();

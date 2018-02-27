@@ -3,15 +3,16 @@
 #include "Posl_Pogov.h"
 #include <string>
 #include <fstream>
+#include "Zagadka.h"
 
 using namespace std;
 
-Klad* Klad::In(ifstream &ifst)   // количетво общее можно сюда присобачить
+Klad* Klad::In(ifstream &ifst)  
 {
 	Klad *klad;
 	int key;
-	ifst >> key;
-	
+	ifst >> key;        // считываем ключ определ€ющий эл
+
 	switch (key)  // в зависимости, от того, что в ключе, туда и отпраит новые данные 
 	{
 	case 1:
@@ -19,6 +20,9 @@ Klad* Klad::In(ifstream &ifst)   // количетво общее можно сюда присобачить
 		break; // возвращаем полученный эл
 	case 2:
 		klad = new Posl_Pog;
+		break;
+	case 3:
+		klad = new Zagadka;
 		break;
 	default:    // нет совпадений -> нет записи
 		return 0;

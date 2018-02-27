@@ -3,7 +3,6 @@
 #include "Posl_Pogov.h"
 #include <string>
 #include <fstream>
-#include "Zagadka.h"
 
 using namespace std;
 
@@ -11,8 +10,8 @@ Klad* Klad::In(ifstream &ifst)   // количетво общее можно сюда присобачить
 {
 	Klad *klad;
 	int key;
-	ifst >> key;        /// считываем ключ определяющий эл
-
+	ifst >> key;
+	
 	switch (key)  // в зависимости, от того, что в ключе, туда и отпраит новые данные 
 	{
 	case 1:
@@ -21,9 +20,6 @@ Klad* Klad::In(ifstream &ifst)   // количетво общее можно сюда присобачить
 	case 2:
 		klad = new Posl_Pog;
 		break;
-	case 3:
-		klad = new Zagadka;
-		break;
 	default:    // нет совпадений -> нет записи
 		return 0;
 	}
@@ -31,35 +27,14 @@ Klad* Klad::In(ifstream &ifst)   // количетво общее можно сюда присобачить
 	getline(ifst, klad->fraza);
 	klad->InData(ifst);
 	return klad;
-
 }
-string Klad::fr()
+void Klad::fr(ofstream &ofst)
 {
-	return fraza;
-}
-
-int Klad::Znaki()
-{
-	char a[] = ".,?!;:-'\"";
-	int Kol = 0;
-	for (int i = 0; i < 8; i++)
-	{
-		for (int j = 0; j < fraza.size(); j++)
-		{
-			if (a[i] == fraza[j])
-			{
-				if (fraza[j] == '.' && fraza[j + 1] == '.' && fraza[j - 1] == '.')
-				{
-					Kol -= 2;
-				}
-				Kol++;
-			}
-		}
-	}
-	return Kol;
+	ofst << fraza << endl;
 }
 
-bool Klad::prov(Klad &a)
+void Klad::OutAfor(ofstream &ofst)
 {
-	return this->Znaki() < a.Znaki();
+	ofst << " - " << endl;
 }
+

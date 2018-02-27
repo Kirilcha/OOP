@@ -8,12 +8,9 @@ class Klad
 	std::string fraza;
 public:
 	static Klad* In(ifstream &ifst);
-	string fr();
-	int Znaki();
+	void fr(ofstream &ofst);
 	virtual void Out(ofstream &ofst) = 0;
 	virtual void InData(ifstream &ifst) = 0;
-	bool prov(Klad &b);
-	
-
+	virtual void OutAfor(ofstream &ofst);
 };
 #endif

@@ -12,4 +12,8 @@ void Aforizm:: Out(ofstream &ofst)
 	ofst << " Автор данного высказывания: " << aftor << endl;
 }
 
-
+void Aforizm::OutAfor(ofstream &ofst)
+{
+	fr(ofst);
+	Out(ofst);
+}

@@ -14,9 +14,12 @@ public:
 	void In(ifstream &ifst);
 	void Out(ofstream &ofst);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	void Sort();
 >>>>>>> 2-2-4
+=======
+>>>>>>> 2-2-5
 	List();
 	~List()
 	{

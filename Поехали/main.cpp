@@ -31,6 +31,7 @@ int main()
 	List* begin = new List;
 	begin->In(in);
 <<<<<<< HEAD
+<<<<<<< HEAD
 	begin->Out(out);
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,6 +53,11 @@ int main()
 
 	cout << endl << "Stop" << endl;
 >>>>>>> 2-2-4
+=======
+	begin->Out(out);
+
+	cout << "Stop" << endl;
+>>>>>>> 2-2-5
 
 	in.close();
 	out.close();

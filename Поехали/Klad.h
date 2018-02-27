@@ -3,6 +3,7 @@
 using namespace std;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #include <string>
 #include <fstream>
@@ -10,10 +11,13 @@ using namespace std;
 >>>>>>> 2-2-3
 =======
 >>>>>>> 2-2-4
+=======
+>>>>>>> 2-2-5
 #ifndef Klad_h
 #define Klad_h
 class Klad
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -69,5 +73,14 @@ public:
 	
 
 >>>>>>> 2-2-4
+=======
+	std::string fraza;
+public:
+	static Klad* In(ifstream &ifst);
+	void fr(ofstream &ofst);
+	virtual void Out(ofstream &ofst) = 0;
+	virtual void InData(ifstream &ifst) = 0;
+	virtual void OutAfor(ofstream &ofst);
+>>>>>>> 2-2-5
 };
 #endif

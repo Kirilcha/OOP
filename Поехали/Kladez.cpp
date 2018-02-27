@@ -5,6 +5,7 @@
 #include <fstream>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2-2-4
 #include "Zagadka.h"
@@ -39,6 +40,17 @@ Klad* Klad::In(ifstream &ifst)   // количетво общее можно сюда присобачить
 	ifst >> key;        /// считываем ключ определяющий эл
 >>>>>>> 2-2-4
 
+=======
+
+using namespace std;
+
+Klad* Klad::In(ifstream &ifst)   // количетво общее можно сюда присобачить
+{
+	Klad *klad;
+	int key;
+	ifst >> key;
+	
+>>>>>>> 2-2-5
 	switch (key)  // в зависимости, от того, что в ключе, туда и отпраит новые данные 
 	{
 	case 1:
@@ -47,6 +59,7 @@ Klad* Klad::In(ifstream &ifst)   // количетво общее можно сюда присобачить
 	case 2:
 		klad = new Posl_Pog;
 		break;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	case 3:
@@ -59,12 +72,15 @@ Klad* Klad::In(ifstream &ifst)   // количетво общее можно сюда присобачить
 		klad = new Zagadka;
 		break;
 >>>>>>> 2-2-4
+=======
+>>>>>>> 2-2-5
 	default:    // нет совпадений -> нет записи
 		return 0;
 	}
 	ifst.get();
 	getline(ifst, klad->fraza);
 	klad->InData(ifst);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	return klad;
@@ -142,3 +158,17 @@ bool Klad::prov(Klad &a)
 	return this->Znaki() < a.Znaki();
 }
 >>>>>>> 2-2-4
+=======
+	return klad;
+}
+void Klad::fr(ofstream &ofst)
+{
+	ofst << fraza << endl;
+}
+
+void Klad::OutAfor(ofstream &ofst)
+{
+	ofst << " - " << endl;
+}
+
+>>>>>>> 2-2-5

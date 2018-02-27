@@ -8,15 +8,19 @@ void Posl_Pog:: InData(ifstream &ifst)
 	ifst.getline(strana, 100, '\n');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	Klad::InData(ifst);
 >>>>>>> 2-2-3
 =======
 >>>>>>> 2-2-4
+=======
+>>>>>>> 2-2-5
 }
 
 void Posl_Pog:: Out(ofstream &ofst)
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37,3 +41,7 @@ void Posl_Pog:: Out(ofstream &ofst)
 }
 
 >>>>>>> 2-2-4
+=======
+	ofst << " Страна данной пословицы/поговорки: " << strana << endl;
+}
+>>>>>>> 2-2-5

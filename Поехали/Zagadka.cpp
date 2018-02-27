@@ -2,11 +2,14 @@
 #include <fstream>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2-2-2
 =======
 >>>>>>> 2-2-4
+=======
+>>>>>>> 2-2-5
 using namespace std;
 
 void Zagadka::InData(ifstream &ifst)
@@ -16,6 +19,7 @@ void Zagadka::InData(ifstream &ifst)
 
 void Zagadka::Out(ofstream &ofst)
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	ofst << " Ответ на загадку: " << otvet << endl;
@@ -30,3 +34,8 @@ void Zagadka::Out(ofstream &ofst)
 }
 
 >>>>>>> 2-2-4
+=======
+	ofst << " Ответ на загадку: " << otvet << endl;
+}
+
+>>>>>>> 2-2-5

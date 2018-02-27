@@ -9,6 +9,7 @@ class Aforizm : public Klad
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	
 >>>>>>> 2-2-2
@@ -27,6 +28,14 @@ public:
 >>>>>>> 2-2-4
 	void InData(ifstream &ifst);
 	void Out(ofstream &ofst);
+=======
+	char aftor[100];
+
+public:
+	void InData(ifstream &ifst);
+	void Out(ofstream &ofst);
+	void OutAfor(ofstream &ofst);
+>>>>>>> 2-2-5
 	Aforizm() {};
 };
 #endif

@@ -13,6 +13,10 @@ public:
 	void Free();
 	void In(ifstream &ifst);
 	void Out(ofstream &ofst);
+<<<<<<< HEAD
+=======
+	void Sort();
+>>>>>>> 2-2-4
 	List();
 	~List()
 	{

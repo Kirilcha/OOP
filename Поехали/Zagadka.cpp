@@ -1,9 +1,12 @@
 #include "Zagadka.h"
 #include <fstream>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2-2-2
+=======
+>>>>>>> 2-2-4
 using namespace std;
 
 void Zagadka::InData(ifstream &ifst)
@@ -14,6 +17,7 @@ void Zagadka::InData(ifstream &ifst)
 void Zagadka::Out(ofstream &ofst)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	ofst << " Ответ на загадку: " << otvet << endl;
 }
 =======
@@ -21,3 +25,8 @@ void Zagadka::Out(ofstream &ofst)
 }
 
 >>>>>>> 2-2-2
+=======
+	ofst << " Ответ на загадку: " << otvet << endl;
+}
+
+>>>>>>> 2-2-4

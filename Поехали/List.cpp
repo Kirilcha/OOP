@@ -1,10 +1,15 @@
 #include "Klad.h"
 #include "List.h"
 #include <fstream>
+<<<<<<< HEAD
+=======
+#include <iostream>
+>>>>>>> 2-2-4
 
 
 void List::Free()       
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -25,12 +30,15 @@ void List::Free()
 }
 
 =======
+=======
+>>>>>>> 2-2-4
 	if (next!=NULL)
 		delete next;
 	delete a;
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 2-2-2
 =======
 	p->next = NULL;
@@ -40,6 +48,8 @@ void List::Free()
 
 
 >>>>>>> 2-2-3
+=======
+>>>>>>> 2-2-4
 void List::In(ifstream &ifst)       
 {
 	int kol = 0;
@@ -69,12 +79,16 @@ void List::Out(ofstream &ofst)
 	List *p = this;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	
 >>>>>>> 2-2-2
 =======
 	
 >>>>>>> 2-2-3
+=======
+	
+>>>>>>> 2-2-4
 	int i = 1;
 	int  kol = 0;
 	while (p!=NULL)
@@ -90,6 +104,7 @@ void List::Out(ofstream &ofst)
 		ofst << i << ": ";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		ofst << p1->a->fr() << endl;
 =======
 		ofst << p1->a->fr() << " (Количество знаков препинания : " << p1->a->Znaki() << ")";
@@ -97,6 +112,9 @@ void List::Out(ofstream &ofst)
 =======
 		ofst << p1->a->fr() << endl; 
 >>>>>>> 2-2-3
+=======
+		ofst << p1->a->fr() << " (Количество знаков препинания : " << p1->a->Znaki() << ")";
+>>>>>>> 2-2-4
 		p1->a->Out(ofst);
 		p1=p1->next;
 		i++;
@@ -104,10 +122,56 @@ void List::Out(ofstream &ofst)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 2-2-3
+=======
+void List::Sort()
+{
+	char p;
+	bool proverka;
+	cout << "\nКак отсортировать? По возрастанию (>) или убыванию (<): ";
+	cin >> p;
+	switch (p)
+	{
+	case '>':
+	{
+				proverka = 0;
+				break;
+	}
+
+	case '<':
+	{
+				proverka = 1;
+				break;
+	}
+	default:
+	{
+			   cout << "Ошибка!" << endl;
+	}
+	}
+
+	Klad* t3;
+	List* t1;
+	List * t2;
+
+	for (t1 = (this); t1; t1 = t1->next)
+	{
+		for (t2 = (this); t2; t2 = t2->next)
+		{
+			if ((t1->a->prov(*t2->a)) - proverka)
+			{
+				t3 = t1->a;
+				t1->a = t2->a;
+				t2->a = t3;
+			}
+		}
+	}
+}
+
+>>>>>>> 2-2-4
 List::List()
 {
 	next = NULL;

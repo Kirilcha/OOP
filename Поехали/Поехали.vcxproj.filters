@@ -28,11 +28,17 @@
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ClInclude Include="Zagadka.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
 =======
 >>>>>>> 2-2-3
+=======
+    <ClInclude Include="Zagadka.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+>>>>>>> 2-2-4
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Afor.cpp">
@@ -51,10 +57,16 @@
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ClCompile Include="Zagadka.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
 =======
 >>>>>>> 2-2-3
+=======
+    <ClCompile Include="Zagadka.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+>>>>>>> 2-2-4
   </ItemGroup>
 </Project>

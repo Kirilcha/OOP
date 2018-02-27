@@ -7,13 +7,17 @@ void Posl_Pog:: InData(ifstream &ifst)
 {
 	ifst.getline(strana, 100, '\n');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	Klad::InData(ifst);
 >>>>>>> 2-2-3
+=======
+>>>>>>> 2-2-4
 }
 
 void Posl_Pog:: Out(ofstream &ofst)
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	ofst << " Страна данной пословицы/поговорки: " << strana << endl;
@@ -28,3 +32,8 @@ void Posl_Pog:: Out(ofstream &ofst)
 }
 
 >>>>>>> 2-2-3
+=======
+	ofst << " Страна данной пословицы/поговорки: " << strana << endl;
+}
+
+>>>>>>> 2-2-4

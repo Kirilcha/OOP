@@ -1,6 +1,9 @@
 #include "Zagadka.h"
 #include <fstream>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2-2-2
 using namespace std;
 
 void Zagadka::InData(ifstream &ifst)
@@ -10,5 +13,11 @@ void Zagadka::InData(ifstream &ifst)
 
 void Zagadka::Out(ofstream &ofst)
 {
+<<<<<<< HEAD
 	ofst << " Ответ на загадку: " << otvet << endl;
 }
+=======
+	ofst << " Ответ на загадку: " << otvet << " (Количество знаков препинания : " << Znak_(otvet) << ")" << endl;
+}
+
+>>>>>>> 2-2-2

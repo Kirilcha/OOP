@@ -31,6 +31,12 @@ int main()
 	List* begin = new List;
 	begin->In(in);
 	begin->Out(out);
+<<<<<<< HEAD
+=======
+	begin->Free();
+	begin = NULL;
+	begin->Out(out);
+>>>>>>> 2-2-2
 
 	cout << "Stop" << endl;
 

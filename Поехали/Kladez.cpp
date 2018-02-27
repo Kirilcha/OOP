@@ -7,7 +7,11 @@
 
 using namespace std;
 
+<<<<<<< HEAD
 Klad* Klad::In(ifstream &ifst)  
+=======
+Klad* Klad::In(ifstream &ifst)   // количетво общее можно сюда присобачить
+>>>>>>> 2-2-2
 {
 	Klad *klad;
 	int key;
@@ -31,8 +35,36 @@ Klad* Klad::In(ifstream &ifst)
 	getline(ifst, klad->fraza);
 	klad->InData(ifst);
 	return klad;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2-2-2
 }
 string Klad::fr()
 {
 	return fraza;
 }
+<<<<<<< HEAD
+=======
+
+int Klad::Znaki()
+{
+	char a[] = ".,?!;:-'\"";
+	int Kol = 0;
+	for (int i = 0; i < 8; i++)
+	{
+		for (int j = 0; j < fraza.size(); j++)
+		{
+			if (a[i] == fraza[j])
+			{
+				if (fraza[j] == '.' && fraza[j + 1] == '.' && fraza[j - 1] == '.')
+				{
+					Kol -= 2;
+				}
+				Kol++;
+			}
+		}
+	}
+	return Kol;
+}
+>>>>>>> 2-2-2

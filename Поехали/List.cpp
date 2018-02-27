@@ -1,19 +1,16 @@
 #include "Klad.h"
 #include "List.h"
 #include <fstream>
+#include <iostream>
 
 
 void List::Free()       
 {
-	if (this == 0)
-		return;
-	List *p = this;
-	List *t;
-
-	p->next = NULL;
-	p->a = NULL;
-	p = NULL;
+	if (next!=NULL)
+		delete next;
+	delete a;
 }
+
 
 void List::In(ifstream &ifst)       
 {
@@ -42,6 +39,7 @@ void List::In(ifstream &ifst)
 void List::Out(ofstream &ofst)        
 {
 	List *p = this;
+	
 	int i = 1;
 	int  kol = 0;
 	while (p!=NULL)
@@ -55,10 +53,53 @@ void List::Out(ofstream &ofst)
 	while (p1!=NULL)
 	{
 		ofst << i << ": ";
-		ofst << p1->a->fr() << endl;
+		ofst << p1->a->fr() << " (Количество знаков препинания : " << p1->a->Znaki() << ")";
 		p1->a->Out(ofst);
 		p1=p1->next;
 		i++;
+	}
+}
+
+void List::Sort()
+{
+	char p;
+	bool proverka;
+	cout << "\nКак отсортировать? По возрастанию (>) или убыванию (<): ";
+	cin >> p;
+	switch (p)
+	{
+	case '>':
+	{
+				proverka = 0;
+				break;
+	}
+
+	case '<':
+	{
+				proverka = 1;
+				break;
+	}
+	default:
+	{
+			   cout << "Ошибка!" << endl;
+	}
+	}
+
+	Klad* t3;
+	List* t1;
+	List * t2;
+
+	for (t1 = (this); t1; t1 = t1->next)
+	{
+		for (t2 = (this); t2; t2 = t2->next)
+		{
+			if ((t1->a->prov(*t2->a)) - proverka)
+			{
+				t3 = t1->a;
+				t1->a = t2->a;
+				t2->a = t3;
+			}
+		}
 	}
 }
 

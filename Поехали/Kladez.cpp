@@ -3,6 +3,7 @@
 #include "Posl_Pogov.h"
 #include <string>
 #include <fstream>
+<<<<<<< HEAD
 #include "Zagadka.h"
 
 using namespace std;
@@ -16,6 +17,16 @@ Klad* Klad::In(ifstream &ifst)   // количетво общее можно сюда присобачить
 	Klad *klad;
 	int key;
 	ifst >> key;        // считываем ключ определ€ющий эл
+=======
+
+using namespace std;
+
+Klad* Klad::In(ifstream &ifst)   // количетво общее можно сюда присобачить
+{
+	Klad *klad;
+	int key;
+	ifst >> key;       
+>>>>>>> 2-2-3
 
 	switch (key)  // в зависимости, от того, что в ключе, туда и отпраит новые данные 
 	{
@@ -25,25 +36,34 @@ Klad* Klad::In(ifstream &ifst)   // количетво общее можно сюда присобачить
 	case 2:
 		klad = new Posl_Pog;
 		break;
+<<<<<<< HEAD
 	case 3:
 		klad = new Zagadka;
 		break;
+=======
+>>>>>>> 2-2-3
 	default:    // нет совпадений -> нет записи
 		return 0;
 	}
 	ifst.get();
 	getline(ifst, klad->fraza);
 	klad->InData(ifst);
+<<<<<<< HEAD
 	return klad;
 <<<<<<< HEAD
 =======
 
 >>>>>>> 2-2-2
+=======
+	ifst.get();
+	return klad;
+>>>>>>> 2-2-3
 }
 string Klad::fr()
 {
 	return fraza;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -68,3 +88,24 @@ int Klad::Znaki()
 	return Kol;
 }
 >>>>>>> 2-2-2
+=======
+
+
+void Klad::InData(ifstream &ifst)
+{
+	ifst >> ocenka;
+}
+
+void Klad::Out(ofstream &ofst)
+{
+	if (ocenka > 10 ||  ocenka < 0)
+	{
+		ofst << "ќценка не соответствует 10 бальной шкале!" << endl;
+	}
+	else
+	{
+		ofst << "—убъективна€ оценка изречени€ по дес€тибалльной шкале = " << ocenka << endl;
+	}
+}
+
+>>>>>>> 2-2-3

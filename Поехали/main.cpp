@@ -32,11 +32,14 @@ int main()
 	begin->In(in);
 	begin->Out(out);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	begin->Free();
 	begin = NULL;
 	begin->Out(out);
 >>>>>>> 2-2-2
+=======
+>>>>>>> 2-2-3
 
 	cout << "Stop" << endl;
 

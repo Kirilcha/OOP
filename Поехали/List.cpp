@@ -6,11 +6,15 @@
 void List::Free()       
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2-2-3
 	if (this == 0)
 		return;
 	List *p = this;
 	List *t;
 
+<<<<<<< HEAD
 	while (p)
 	{
 		t = p;
@@ -28,6 +32,14 @@ void List::Free()
 
 
 >>>>>>> 2-2-2
+=======
+	p->next = NULL;
+	p->a = NULL;
+	p = NULL;
+}
+
+
+>>>>>>> 2-2-3
 void List::In(ifstream &ifst)       
 {
 	int kol = 0;
@@ -56,9 +68,13 @@ void List::Out(ofstream &ofst)
 {
 	List *p = this;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	
 >>>>>>> 2-2-2
+=======
+	
+>>>>>>> 2-2-3
 	int i = 1;
 	int  kol = 0;
 	while (p!=NULL)
@@ -73,16 +89,25 @@ void List::Out(ofstream &ofst)
 	{
 		ofst << i << ": ";
 <<<<<<< HEAD
+<<<<<<< HEAD
 		ofst << p1->a->fr() << endl;
 =======
 		ofst << p1->a->fr() << " (Количество знаков препинания : " << p1->a->Znaki() << ")";
 >>>>>>> 2-2-2
+=======
+		ofst << p1->a->fr() << endl; 
+>>>>>>> 2-2-3
 		p1->a->Out(ofst);
 		p1=p1->next;
 		i++;
 	}
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 2-2-3
 List::List()
 {
 	next = NULL;

@@ -7,12 +7,18 @@ using namespace std;
 class Aforizm : public Klad
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	
 >>>>>>> 2-2-2
 
 public:
 	char aftor[100];
+=======
+	char aftor[100];
+
+public:
+>>>>>>> 2-2-3
 	void InData(ifstream &ifst);
 	void Out(ofstream &ofst);
 	Aforizm() {};

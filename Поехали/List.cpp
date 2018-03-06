@@ -1,7 +1,8 @@
-	#include "Klad.h"
-	#include "List.h"
-	#include <fstream>
 
+#include "Klad.h"
+#include "List.h"
+#include <fstream>
+#include <iostream>
 
 
 	void List::Free()       
@@ -67,15 +68,51 @@
 		}
 	}
 
-	List::List()
+void List::Sort()
+{
+	char p;
+	bool proverka;
+	cout << "\nКак отсортировать? По возрастанию (>) или убыванию (<): ";
+	cin >> p;
+	switch (p)
 	{
-		next = NULL;
-		a = NULL;
-		ofst << i << ": ";
-		ofst << p1->a->fr() << endl; 
-		p1->a->Out(ofst);
-		p1=p1->next;
-		i++;
+	case '>':
+	{
+				proverka = 0;
+				break;
+	}
+
+	case '<':
+	{
+				proverka = 1;
+				break;
+	}
+	default:
+	{
+			   cout << "Ошибка!" << endl;
+	}
+	}
+
+	Klad* t3;
+	List* t1;
+	List * t2;
+
+	for (t1 = (this); t1; t1 = t1->next)
+	{
+		for (t2 = (this); t2; t2 = t2->next)
+		{
+			if ((t1->a->prov(*t2->a)) - proverka)
+			{
+				t3 = t1->a;
+				t1->a = t2->a;
+				t2->a = t3;
+			}
+		}
 	}
 }
 
+List::List()
+{
+	next = NULL;
+	a = NULL;
+}

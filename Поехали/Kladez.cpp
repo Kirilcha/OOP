@@ -6,11 +6,12 @@
 
 using namespace std;
 
+
 Klad* Klad::In(ifstream &ifst)  
 {
 	Klad *klad;
 	int key;
-	ifst >> key;
+	ifst >> key;    
 
 	switch (key) 
 	{
@@ -56,3 +57,10 @@ void Klad::Out(ofstream &ofst)
 	}
 }
 
+	return Kol;
+}
+
+bool Klad::prov(Klad &a)
+{
+	return this->Znaki() < a.Znaki();
+}

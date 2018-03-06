@@ -15,7 +15,6 @@ void List::Free()
 	p = NULL;
 }
 
-
 void List::In(ifstream &ifst)       
 {
 	int kol = 0;
@@ -63,8 +62,6 @@ void List::Out(ofstream &ofst)
 		i++;
 	}
 }
-
-
 
 List::List()
 {

@@ -1,9 +1,6 @@
 #include <string>
 #include <fstream>
 using namespace std;
-#include <string>
-#include <fstream>
-using namespace std;
 #ifndef Klad_h
 #define Klad_h
 class Klad

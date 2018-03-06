@@ -10,6 +10,6 @@ void Posl_Pog:: InData(ifstream &ifst)
 
 void Posl_Pog:: Out(ofstream &ofst)
 {
-	ofst << " Страна данной пословицы/поговорки: " << strana << endl;
-}
 
+	ofst << " Страна данной пословицы/поговорки: " << strana << " (Количество знаков препинания : " << Znak_(strana) << ")" << endl;
+}

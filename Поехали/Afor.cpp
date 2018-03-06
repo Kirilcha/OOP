@@ -9,7 +9,9 @@ void Aforizm:: InData(ifstream &ifst)
 
 void Aforizm:: Out(ofstream &ofst)
 {
-	ofst << " Автор данного высказывания: " << aftor << endl;
+
+	ofst << " Автор данного высказывания: " << aftor << " (Количество знаков препинания : " << Znak_(aftor) << ")"<< endl;
+
 }
 
 

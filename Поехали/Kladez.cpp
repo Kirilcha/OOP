@@ -7,16 +7,17 @@
 
 using namespace std;
 
-Klad* Klad::In(ifstream &ifst)
+
+Klad* Klad::In(ifstream &ifst)  
 {
 	Klad *klad;
 	int key;
-	ifst >> key;      
+	ifst >> key;    
 
-	switch (key)  
+	switch (key) 
 	{
 	case 1:
-		klad = new Aforizm;  
+		klad = new Aforizm; 
 		break;
 	case 2:
 		klad = new Posl_Pog;

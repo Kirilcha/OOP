@@ -31,6 +31,7 @@ int main()
 	List* begin = new List;
 	begin->In(in);
 	begin->Sort();
+
 	begin->Out(out);
 	begin->Free();
 	begin = NULL;

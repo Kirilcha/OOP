@@ -8,6 +8,7 @@ class Aforizm : public Klad
 {
 
 
+
 public:
 	char aftor[100];
 	void InData(ifstream &ifst);

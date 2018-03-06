@@ -3,7 +3,6 @@
 #include <fstream>
 #include <iostream>
 
-
 void List::Free()       
 {
 	if (next!=NULL)
@@ -39,7 +38,6 @@ void List::In(ifstream &ifst)
 void List::Out(ofstream &ofst)        
 {
 	List *p = this;
-	
 	int i = 1;
 	int  kol = 0;
 	while (p!=NULL)

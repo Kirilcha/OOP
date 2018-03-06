@@ -11,20 +11,20 @@ Klad* Klad::In(ifstream &ifst)
 {
 	Klad *klad;
 	int key;
-	ifst >> key;        // считываем ключ определяющий эл
+	ifst >> key;   
 
-	switch (key)  // в зависимости, от того, что в ключе, туда и отпраит новые данные 
+	switch (key) 
 	{
 	case 1:
-		klad = new Aforizm;  // отправляем в функцию(АФ) полученные данные
-		break; // возвращаем полученный эл
+		klad = new Aforizm;  
+		break;
 	case 2:
 		klad = new Posl_Pog;
 		break;
 	case 3:
 		klad = new Zagadka;
 		break;
-	default:    // нет совпадений -> нет записи
+	default:   
 		return 0;
 	}
 	ifst.get();

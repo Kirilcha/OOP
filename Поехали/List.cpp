@@ -71,4 +71,11 @@
 	{
 		next = NULL;
 		a = NULL;
+		ofst << i << ": ";
+		ofst << p1->a->fr() << endl; 
+		p1->a->Out(ofst);
+		p1=p1->next;
+		i++;
 	}
+}
+

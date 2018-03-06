@@ -13,14 +13,18 @@ Klad* Klad::In(ifstream &ifst)
 	ifst >> key;
 	
 	switch (key)  
+
 	{
 	case 1:
 		klad = new Aforizm;  
 		break;
 	case 2:
 		klad = new Posl_Pog;
+		break;  
+	case 3:
+		klad = new Zagadka;
 		break;
-	default:    
+	default:   
 		return 0;
 	}
 	ifst.get();

@@ -11,6 +11,12 @@ class Aforizm : public Klad
 public:
 	void InData(ifstream &ifst);
 	void Out(ofstream &ofst);
+
+	void MultiMethod(Klad *other, ofstream &ofst);
+	void MMAf(ofstream &ofst);
+	void MMPos(ofstream &ofst);
+	void MMZag(ofstream &ofst);
+
 	Aforizm() {};
 };
 #endif

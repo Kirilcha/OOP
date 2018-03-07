@@ -6,9 +6,9 @@ using namespace std;
 #define Aforizm_h
 class Aforizm : public Klad
 {
-	char aftor[100];
 
 public:
+	char aftor[100];
 	void InData(ifstream &ifst);
 	void Out(ofstream &ofst);
 	Aforizm() {};

@@ -14,34 +14,31 @@ int main()
 	in.open("1.txt");
 	if (!in.is_open())
 	{
-		cout << "Ошибка с файлом";
+		cout << "Ошибка с входным файлом";
 		return -1;
 	}
-
 	ofstream out;
 	out.open("2.txt");
 	if (!out.is_open())
 	{
-		cout << "Ошибка с файлом";
+		cout << "Ошибка с выходным файлом";
 		return -1;
 	}
 
-	cout << "Start" << endl;
+	cout << "Считывание данных" << endl;
 
 	List* begin = new List;
 	begin->In(in);
-
 	begin->Sort();
-
+	begin->Out(out);
 	begin->Free();
 	begin = NULL;
-	begin->Out(out);
 
-	cout << endl << "Stop" << endl;
+	cout << endl << "Запись данных" << endl;
 
 	in.close();
 	out.close();
-
+	cout << "\nРабота программы завершена корректно" << endl;
 	_getch();
 	return 0;
 }

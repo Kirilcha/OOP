@@ -10,5 +10,21 @@ void Posl_Pog:: InData(ifstream &ifst)
 
 void Posl_Pog:: Out(ofstream &ofst)
 {
-	ofst << " Страна данной пословицы/поговорки: " << strana << " (Количество знаков препинания : " << Znak_(strana) << ")" << endl;
+	fr(ofst);
+	ofst << " Страна данной пословицы/поговорки: " << strana << endl;
+}
+
+void Posl_Pog::MultiMethod(Klad *other, ofstream &ofst)
+{
+	other->MMPos(ofst);
+}
+
+void Posl_Pog::MMAf(ofstream &ofst)
+{
+	ofst << "Афоризм и Пословица:" << endl;
+}
+
+void Posl_Pog::MMPos(ofstream &ofst)
+{
+	ofst << "Пословица и Пословица:" << endl;
 }
